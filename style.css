@@ -152,9 +152,8 @@
 }
 .about {
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 80px;
     border-top: 1px solid rgba(65, 37, 103, 1);
 }
@@ -227,6 +226,8 @@
 .episodes-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
     gap: 30px;
     margin: 0 auto;
     color: var(--primary-color);
@@ -262,6 +263,8 @@
     color: #00FF88;
 }
 .host-container {
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 40px;
     padding: 40px;
     gap: 24px;
@@ -269,6 +272,9 @@
     align-items: center;
     justify-content: space-around;
     background: rgba(53, 17, 101, 0.4);
+}
+.host-content {
+    width: 100%;
 }
 .host-content h2 {
     font-size: 2rem;
@@ -351,7 +357,47 @@
         padding: 16px 10px;
     }
     .navbar ul {
-        gap: 16px;
+        gap: 10px;
+    }
+    .about {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .grid-content {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .episodes-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .episodes-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .host-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .host-content {
+        width: 100%;
+        margin: 0 auto;
+}
+    .host-icon {
+        display: flex;
     }
 }
 
@@ -361,5 +407,10 @@
     .navbar {
         padding: 16px 50px;
     }
-    
+        .episodes-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
