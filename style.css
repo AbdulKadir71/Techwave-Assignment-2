@@ -400,6 +400,9 @@
     .host-icon {
         display: flex;
     }
+    .footer-social{
+        width: 100%;
+    }
 }
 
 /* Medium Device */
